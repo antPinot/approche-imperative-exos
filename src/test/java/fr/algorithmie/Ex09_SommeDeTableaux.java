@@ -6,6 +6,7 @@ import org.junit.runner.RunWith;
 import outils.Exercice;
 import outils.ExerciceRunner;
 import outils.Question;
+import outils.Resultat;
 
 /**
  * Ne modifiez ni les noms des classes, ni les noms des méthodes.
@@ -32,6 +33,14 @@ public class Ex09_SommeDeTableaux {
 		// dont chaque case d’index i contient la somme arithmétique des cases d’index i
 		// des tableaux 1 et 2.
 		// Exemple : somme[i]=tab1[i]+tab2[i]
-	
+		int somme = 0;
+		int[] sommeTab = new int [tab2.length];
+		for (int i=0; i<tab2.length; i++) {
+			sommeTab[i] = tab1[i] + tab2 [i];
+		}
+		
+		for (int i=0; i<sommeTab.length; i++) {
+			Resultat.log(sommeTab[i]);
+		}
 	}
 }
