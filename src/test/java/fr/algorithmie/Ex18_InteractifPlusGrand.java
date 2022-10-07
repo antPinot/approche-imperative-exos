@@ -27,28 +27,36 @@ public class Ex18_InteractifPlusGrand {
 	@Question(numero = 1)
 	public void interactif() {
 		
-		Scanner scanner = new Scanner(System.in) ;
+		Scanner scanner = new Scanner(System.in);
 		
 		// TODO Demander à l'utilisateur de saisir 10 nombres entiers
 		
 		System.out.println("Veuillez saisir 10 nombres entiers");
 		
-		int [] nb = new int[];
+		int[] nb = new int[10];
 		
 		for (int i=0; i<nb.length; i++) {
 			
-			int nb[i] = scanner.nextInt();
+			 nb[i] = scanner.nextInt();
 			
 		}
 
-		
-
-		
 		// TODO Affichez chaque nombre saisi avec Resultat.log
+		
+		for (int i=0; i<nb.length; i++) {
+			Resultat.log(nb[i]);
+		}
 		
 		
 		// TODO Enfin affichez avec Resultat.log le max des 10 nombres
-	
+		
+		int max = nb[0];
+		for (int i=0; i<nb.length; i++) {
+			if (nb[i] > max) {
+				max = nb [i];
+			}
+		}
+		Resultat.log(max);
 		
 		scanner.close();
 	}
